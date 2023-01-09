@@ -55,19 +55,21 @@ class Robot():
             print("the robot is already 100 charged")
 
 
-    def movement_on(self, speed=0):
+    def movement_on(self, speed=random.randint(1,20)):
        
         if self.__power == True:  #Le robot doit être allumé
             if self.__battery_level>0: #Le robot doit avoir de la batterie
 
                 #Coeur fonction mouvement
                 if self.__movement == False :
-                    self.__movement == True
+                    self.__movement = True
                     self. __current_speed = speed
-                    speed = random.randint(1,20)
+                    
                     print("the robot is moving")
                     print("speed of the robot :", speed)
                 elif self.__movement == True :
+                    self.__movement = True
+                    self. __current_speed = speed
                     print("the robot is already moving")
 
             else :
@@ -77,18 +79,33 @@ class Robot():
 
     
     def movement_off(self,speed = 0):
-        #Le robot est à l'arrêt
-        if self.__movement == True :
-            self.__movement == False
-            self. __current_speed = speed
-            print("the robot is not moving")
+        if self.__power == True:  #Le robot doit être allumé
+            if self.__battery_level>0: #Le robot doit avoir de la batterie
 
-        elif self.__movement == False :
-            print("the robot isn't already moving")
-        
+                #Le robot est à l'arrêt
+                if self.__movement == True :
+                    self.__movement = False
+                    self. __current_speed = speed
+                    print("the robot is not moving")
+
+                elif self.__movement == False :
+                    print("the robot isn't already moving")
+
+            else :
+                print("you must have to charge on the robot")
+        else :
+            print("you must have to turn on the robot")
+
+    
+    def get_speed(self):
+        if self.__movement == True :
+            print("get speed of the robot", self.__current_speed)
+        elif self.__movement == False : 
+            print("the robot have to move")
 
             
-
+    def getSettings(self):
+        
 
     #define robot
 
@@ -96,4 +113,4 @@ r = Robot("walle")
 r.boot()
 r.charge(100)
 r.movement_on()
-    
+r.get_speed()
