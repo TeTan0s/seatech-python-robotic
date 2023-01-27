@@ -15,6 +15,11 @@ front_leftMotor = robot.getMotor("front left wheel")
 back_rightMotor = robot.getMotor("back right wheel")
 front_rightMotor = robot.getMotor("front right wheel")
 
+back_leftSensor = robot.getPositionSensor("back left wheel sensor")
+front_leftSensor = robot.getPositionSensor("front left wheel sensor")
+back_rightSensor = robot.getPositionSensor("back right wheel sensor")
+front_rightSensor = robot.getPositionSensor("front right wheel sensor")
+
 # Set the target speed of the motors
 back_leftMotor.setPosition(float("inf"))
 front_leftMotor.setPosition(float("inf"))
@@ -24,8 +29,8 @@ front_rightMotor.setPosition(float("inf"))
 # Set the target speed of the motors
 back_leftMotor.setVelocity(5.0)
 front_leftMotor.setVelocity(5.0)
-back_rightMotor.setVelocity(5.0)
-front_rightMotor.setVelocity(5.0)
+back_rightMotor.setVelocity(0.0)
+front_rightMotor.setVelocity(0.0)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
