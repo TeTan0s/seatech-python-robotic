@@ -104,7 +104,7 @@ class Robot():
             print("the robot have to move")
 
             
-    def getSettings(self):
+    def Global_settings(self):
         
 
     #define robot

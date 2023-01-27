@@ -1,0 +1,92 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "../protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/MattePaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/toys/protos/RubberDuck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/adept/pioneer3/protos/Pioneer3at.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.3472638348586992 0.12145962652116822 -0.9298684789391285 2.365243050050347
+  position 3.8137110848782725 3.875689134104095 6.7895478675259255
+}
+TexturedBackground {
+  texture "noon_stormy_empty"
+}
+TexturedBackgroundLight {
+  luminosity 1.5
+}
+RubberDuck {
+  translation 3.718758283281637 3.7339447937130315 2.178292326669029
+  rotation 0.023978095647555226 0.006549400844219872 0.9996910304077448 0.7167482316560481
+  name "duck1"
+  scale 7
+}
+RubberDuck {
+  translation -3.7373078158685753 -3.6948156547134383 2.178289553394719
+  rotation 0.005121057130196367 -0.008322968018768506 0.9999522503485992 -2.21658665020232
+  name "duck3"
+  scale 7
+  bodyColor 0.878431 0.105882 0.141176
+}
+RubberDuck {
+  translation -3.7260994844876913 3.7440129415227434 2.1804418289020604
+  rotation 0.00650741030216155 -0.0019531726824851213 0.9999769190974519 2.4027460624198502
+  name "duck4"
+  scale 7
+  bodyColor 0.878431 0.105882 0.141176
+}
+RubberDuck {
+  translation 3.7300200720205963 -3.696194280788876 2.1782882518998528
+  rotation 0.020257506363499166 -0.010755164933464248 -0.9997369453327143 0.7832097221634244
+  name "duck2"
+  scale 7
+  bodyColor 0.180392 0.760784 0.494118
+}
+CircleArena {
+  name "defeat arena"
+  radius 8
+  floorAppearance MattePaint {
+    baseColor 0.300008 0.0119936 0.0119936
+  }
+}
+SolidBox {
+  translation 0 0 2
+  rotation 0.707084957913509 0.707084957913509 0.007856499532372323 0
+  name "arena"
+  size 8 8 0.1
+  appearance PBRAppearance {
+    baseColor 0 0 0
+    baseColorMap ImageTexture {
+    }
+    roughness 0.5
+    metalness 0
+  }
+}
+Pioneer3at {
+  hidden position_0_0 -2.74379302302295e-10
+  hidden position_0_1 2.743855179862289e-10
+  hidden position_0_2 2.7430627358049397e-10
+  hidden position_0_3 -2.743081063898145e-10
+  hidden linearVelocity_0 4.974721707805652e-16 -1.0715414500063707e-16 5.425962709440765e-15
+  hidden angularVelocity_0 1.3322631236003043e-15 8.77038827316722e-16 1.2670388267642059e-13
+  hidden rotation_1 0.5773516010462774 -0.5773476010490559 -0.5773516054642962 2.0944049955820043
+  hidden linearVelocity_1 -2.065696307816847e-10 -5.3897372165065054e-15 -3.1853215713695765e-15
+  hidden angularVelocity_1 4.8289094101100705e-15 -2.7233331157846952e-09 1.2915308041825899e-13
+  hidden rotation_2 0.5773516009400779 -0.5773476009428582 -0.5773516056766929 2.0944049952634165
+  hidden linearVelocity_2 2.065736228477717e-10 -5.34531084242379e-15 -5.134688541370306e-15
+  hidden angularVelocity_2 8.112720590963566e-16 2.723380942508808e-09 1.2372353783629761e-13
+  hidden rotation_3 0.5773516039733216 -0.5773476039760503 -0.5773515996102779 2.094405004363011
+  hidden linearVelocity_3 2.0649804093927379e-10 5.307276434187807e-15 3.250616914817723e-15
+  hidden angularVelocity_3 -9.412593766462669e-16 2.7225909565135445e-09 1.2425342581935343e-13
+  hidden rotation_4 0.5773516040785452 -0.5773476040812723 -0.5773515993998328 2.0944050046786846
+  hidden linearVelocity_4 -2.0650058921481406e-10 5.106067520974478e-15 4.96966280348213e-15
+  hidden angularVelocity_4 1.2646976817445791e-15 -2.7226256525028347e-09 1.2965354214558893e-13
+  translation 0.00027975939401288436 4.412697789518896e-06 2.047611068930523
+  rotation -0.014915683111269505 0.9998887139821189 0.0002864411085097426 4.9183404253311076e-05
+  controller "my_controller"
+}
