@@ -75,7 +75,7 @@ while robot.step(timestep) != -1:
     sum_distanceSensor = frontSensorValue1 + frontSensorValue2+frontSensorValue3+frontSensorValue4+frontSensorValue5+frontSensorValue6
 
 
-    print(sum_distanceSensor)
+  
     # If the front sensor value is less than a certain threshold
     if sum_distanceSensor > 200:
         # Change the direction of the robot
